@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="756" pageHeight="792" columnWidth="716" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58f32949-aa66-4f0d-bd56-db85f832e738">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM `tbl_karyawan` INNER JOIN `tbl_level` ON `tbl_karyawan`.`ID_LEVEL` = `tbl_level`.`ID_LEVEL`]]>
+	</queryString>
+	<field name="ID_KARYAWAN" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_LEVEL" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NAMA_USER" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="JK" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOPE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="USERNAME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PASSWORD" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LEVEL" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="281" y="0" width="150" height="20" uuid="0dbbce05-989d-422e-aa1c-9fac3d537287"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DAFTAR DATA USER]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="281" y="17" width="87" height="20" uuid="78e901b8-580d-4a2f-a9db-b12e5c6c0a6c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[JENIS KELAMIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="17" width="62" height="20" uuid="b432a2b2-8a41-40e3-b8c7-b61dec668600"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAMA USER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="-170" width="62" height="20" uuid="f1587442-7bb0-492f-aca7-e12d0f04ac72"/>
+				<text><![CDATA[NO HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="17" width="62" height="20" uuid="fc933af3-b684-428c-84eb-541f16b3805c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NO HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="17" width="62" height="20" uuid="3053c534-80b1-47a1-b423-260a129bca9b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[USERNAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="17" width="62" height="20" uuid="62ddfbac-7808-4f81-a1d7-d6e373f98d68"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID USER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="17" width="62" height="20" uuid="2a622b6c-96c4-4d74-82c6-f84ace4a52ed"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[LEVEL]]></text>
+			</staticText>
+			<line>
+				<reportElement x="92" y="48" width="532" height="1" uuid="735f13f3-18d5-411f-b94b-88247292600f"/>
+			</line>
+			<line>
+				<reportElement x="92" y="62" width="532" height="1" uuid="b543b107-7f0b-4a11-978d-0aadb66a66ef"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="385" y="9" width="62" height="20" uuid="e68a8304-5fac-4284-988e-075dbf5207c0"/>
+				<textFieldExpression><![CDATA[$F{NOPE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="9" width="62" height="20" uuid="b2ae8ce7-12cd-40cd-99c8-52863d248c0f"/>
+				<textFieldExpression><![CDATA[$F{JK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="467" y="9" width="62" height="20" uuid="3df5888f-7472-4de3-9513-dbfe3f2abf21"/>
+				<textFieldExpression><![CDATA[$F{USERNAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="9" width="62" height="20" uuid="f803089a-2920-4c9c-bbb4-7ce4f55a19a5"/>
+				<textFieldExpression><![CDATA[$F{NAMA_USER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="542" y="9" width="82" height="20" uuid="2e1c62ee-949e-46bb-8eee-2bf858529105"/>
+				<textFieldExpression><![CDATA[$F{LEVEL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="9" width="62" height="20" uuid="cb39fa47-56ec-458f-b473-3480e933a291"/>
+				<textFieldExpression><![CDATA[$F{ID_KARYAWAN}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="92" y="44" width="532" height="1" uuid="26a33e98-041e-4886-9e32-6610f8475bf9"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
